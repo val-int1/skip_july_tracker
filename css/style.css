@@ -1,0 +1,225 @@
+@font-face {
+	font-family: "Minecraftio";
+	src: url("../assets/minecraftio.ttf");
+}
+
+@keyframes splashText {
+	0% {
+		scale: 1.1
+	}
+	50% {
+		scale: 0.95
+	}
+	100% {
+		scale: 1.1
+	}
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+
+body {
+	font-family: "Minecraftio";
+	font-size: 16px;
+	color: white;
+	text-shadow: 2px 2px 0 #404040;
+
+	background-image: url("../assets/bg.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+header {
+	margin-bottom: 3.5em;
+}
+
+header #splashText {
+	position: absolute;
+	rotate: -12.25deg;
+	translate: 15em 5em;
+	animation: 1.5s cubic-bezier(.45,.05,.55,.95) infinite splashText;
+	color: #FFFF00;
+	text-shadow: 2px 2px 0 #404000;
+}
+
+
+header #splashText .stroke {
+	position: relative;
+	display: inline-block;
+}
+
+header #splashText .stroke::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background-color: #FFFF00;
+	box-shadow: 2px 2px 0 #404000;
+	width: 100%;
+	height: 2px;
+	top: 50%;
+	right: 0;
+}
+
+footer {
+	backdrop-filter: blur(5px);
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hcenter {
+	display: flex;
+	justify-content: center;
+}
+
+.vcenter {
+	display: flex;
+	align-items: center;
+}
+
+header {
+	padding: 0.67em 2em;
+}
+
+header img {
+	width: calc(100vw - 4em);
+	max-width: 720px;
+}
+
+main {
+	padding: 0 2em;
+	padding-bottom: 2em;
+}
+
+#controls {
+	padding-bottom: 2em;
+}
+
+#controls button {
+	width: 240px;
+	height: 40px;
+	font-family: "Minecraftio";
+	font-size: 16px;
+	color: white;
+	text-shadow: 2px 2px 0 #404040;
+	background-image: url("../assets/button.png");
+	border: none;
+}
+
+#controls button:hover {
+	background-image: url("../assets/button_hover.png");
+}
+
+#controls button.selected {
+	background-image: url("../assets/button_selected.png");
+	pointer-events: none;
+}
+
+#controls button:first-of-type, #chartWrapper {
+	margin: 0 2em;
+}
+
+#chartWrapper {
+	max-height: 50vh;
+	height: 50vw;
+}
+
+#chart {
+	background-color: #0000007F;
+	backdrop-filter: blur(10px);
+	border-radius: 8px;
+}
+
+#stats {
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a.advancement {
+	background-image: url("../assets/advancement.png");
+	display: block;
+	width: 312px;
+	padding-right: 8px;
+	height: 64px;
+	color: white;
+	text-shadow: none;
+	text-decoration: none;
+}
+
+a.advancement.root {
+	font-style: italic;
+	color: #FFAA00;
+}
+
+#episodeDetails .root {
+	font-style: italic;
+	color: #FFAA00;
+	text-shadow: 2px 2px 0 #402B00;
+}
+
+a.advancement div {
+	height: 100%;
+}
+
+a.advancement div img.icon {
+	width: 32px;
+	height: 32px;
+	margin: 16px;
+	image-rendering: pixelated;
+}
+
+a:not(.advancement) {
+	color: #55FFFF;
+	text-shadow: 2px 2px 0 #154040;
+}
+
+#episodeDetails > div {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+ul.episodeList {
+	width: 40%;
+}
+
+ul.episodeList ul {
+	margin-top: 0.75em;
+}
+
+footer {
+	position: sticky;
+	bottom: 0;
+	padding: 1em 2em;
+	background-color: #0000007F;
+}
+
+footer p {
+	margin: 0;
+}
+
+footer p:not(:first-of-type) {
+	padding-left: 2em;
+}
+
+#nerd {
+	position: fixed;
+	bottom: 0;
+	translate: 0 100%;
+}
+
+#nerd.show {
+	translate: 0 0;
+}
