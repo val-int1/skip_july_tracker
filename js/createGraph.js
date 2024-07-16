@@ -16,8 +16,10 @@ document.getElementById("splashText").innerHTML = splashTexts[Math.floor(Math.ra
 
 const canvas = document.getElementById("chart")
 
-let leastAdvancements = [0, episodes[0].advancements.length]
-let mostAdvancements = [0, episodes[0].advancements.length]
+let leastAdvancements = 122
+let leastAdvancementsEpisodes = []
+let mostAdvancements = -1
+let mostAdvancementsEpisodes = []
 
 let days = []
 let episodeAdvancements = []
@@ -66,11 +68,18 @@ for(let index in episodes) {
 	let advancements = episode.advancements.length
 	episodeAdvancements[i] = advancements
 
-	if(leastAdvancements[1] > advancements) {
-		leastAdvancements = [i, advancements]
+	if(leastAdvancements > advancements) {
+		leastAdvancements = advancements
+		leastAdvancementsEpisodes = [i]
+	} else if(leastAdvancements == advancements) {
+		leastAdvancementsEpisodes.push(i)
 	}
-	if(mostAdvancements[1] < advancements) {
-		mostAdvancements = [i, advancements]
+
+	if(mostAdvancements < advancements) {
+		mostAdvancements = advancements
+		mostAdvancementsEpisodes = [i]
+	} else if(mostAdvancements == advancements) {
+		mostAdvancementsEpisodes.push(i)
 	}
 
 	advancementCount += advancements
@@ -107,10 +116,25 @@ for(let index in episodes) {
 	}
 }
 
-let average = Math.round((advancementCount / episodes.length)*1000) / 1000
+function makeMinMaxStr(minmax, amount, episodes) {
+	if(episodes.length == 1) {
+		return `The episode with the ${minmax} advancements earned is #${episodes[0] + 1} with ${amount} advancements`
+	}
+	let s = `The episodes with the ${minmax} advancements earned were #${episodes[0] + 1}`
+	for(let i = 1; i < episodes.length; i++) {
+		if(i === episodes.length - 1) {
+			s = s + " and "
+		} else {
+			s = s + ", "
+		}
+		s = s + `#${episodes[i] + 1}`
+	}
+	return s + ` with ${amount} advancements`
+}
 
-document.getElementById("least").innerText = `The episode with the least advancements earned is #${leastAdvancements[0] + 1} with ${leastAdvancements[1]} advancements`
-document.getElementById("most").innerText = `The episode with the most advancements earned is #${mostAdvancements[0] + 1} with ${mostAdvancements[1]} advancements`
+document.getElementById("least").innerText = makeMinMaxStr("least", leastAdvancements, leastAdvancementsEpisodes)
+document.getElementById("most").innerText = makeMinMaxStr("most", mostAdvancements, mostAdvancementsEpisodes)
+let average = Math.round((advancementCount / episodes.length)*1000) / 1000
 document.getElementById("average").innerText = `On average, Skip got ~${average} advancements per episode`
 let remaining = 122 - advancementCount
 let estimate = episodes.length + Math.ceil(remaining / average)
@@ -155,7 +179,7 @@ let totalButton = document.getElementById("totalButton")
 totalButton.addEventListener("click", (e) => changeChart(totalButton, totalAdvancements, 122))
 
 let episodeButton = document.getElementById("episodeButton")
-let episodeGraphMax = mostAdvancements[1]
+let episodeGraphMax = mostAdvancements
 if(episodeGraphMax % 2 == 1) {
 	episodeGraphMax += 1
 } else {
@@ -174,5 +198,7 @@ document.addEventListener("keydown", (e) => {
 			easterEggIndex = 0
 			nerd.classList.toggle("show")
 		}
+	} else {
+		easterEggIndex = 0
 	}
 });

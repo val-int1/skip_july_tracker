@@ -248,6 +248,15 @@ const episodes = [
 		"advancements": [
 			"adventure/avoid_vibration", "adventure/kill_mob_near_sculk_catalyst"
 		]
+	},
+	{
+		"title": "I Finally Got Minecraft's Hidden Advancement... (#16)",
+		"videoId": "Tbngx5eqY_w",
+		"advancements": [
+			"adventure/spyglass_at_parrot", "adventure/crafters_crafting_crafters", "adventure/throw_trident", "husbandry/allay_deliver_item_to_player",
+			"husbandry/allay_deliver_cake_to_note_block", "husbandry/feed_snifflet", "adventure/adventuring_time", "adventure/walk_on_powder_snow_with_leather_boots",
+			"husbandry/ride_a_boat_with_a_goat", "adventure/arbalistic"
+		]
 	}
 ]
 
