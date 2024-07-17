@@ -257,6 +257,14 @@ const episodes = [
 			"husbandry/allay_deliver_cake_to_note_block", "husbandry/feed_snifflet", "adventure/adventuring_time", "adventure/walk_on_powder_snow_with_leather_boots",
 			"husbandry/ride_a_boat_with_a_goat", "adventure/arbalistic"
 		]
+	},
+	{
+		"title": "I Lost My Inventory in Minecraft... (#17)",
+		"videoId": "ddrEajng5UI",
+		"advancements": [
+			"husbandry/axolotl_in_a_bucket", "nether/uneasy_alliance", "adventure/kill_all_mobs", "husbandry/kill_axolotl_target",
+			"adventure/lightning_rod_with_villager_no_fire"
+		]
 	}
 ]
 
