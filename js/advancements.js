@@ -265,6 +265,13 @@ const episodes = [
 			"husbandry/axolotl_in_a_bucket", "nether/uneasy_alliance", "adventure/kill_all_mobs", "husbandry/kill_axolotl_target",
 			"adventure/lightning_rod_with_villager_no_fire"
 		]
+	},
+	{
+		"title": "I Got a Shulker Out of The End in Minecraft... (#18)",
+		"videoId": "Nd87hbL66fo",
+		"advancements": [
+			"adventure/very_very_frightening"
+		]
 	}
 ]
 

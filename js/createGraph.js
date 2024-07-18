@@ -117,8 +117,9 @@ for(let index in episodes) {
 }
 
 function makeMinMaxStr(minmax, amount, episodes) {
+	let advancementStr = `advancement${amount == 1 ? "" : "s"}`
 	if(episodes.length == 1) {
-		return `The episode with the ${minmax} advancements earned is #${episodes[0] + 1} with ${amount} advancements`
+		return `The episode with the ${minmax} advancements earned is #${episodes[0] + 1} with ${amount} ${advancementStr}`
 	}
 	let s = `The episodes with the ${minmax} advancements earned were #${episodes[0] + 1}`
 	for(let i = 1; i < episodes.length; i++) {
@@ -129,7 +130,7 @@ function makeMinMaxStr(minmax, amount, episodes) {
 		}
 		s = s + `#${episodes[i] + 1}`
 	}
-	return s + ` with ${amount} advancements`
+	return s + ` with ${amount} ${advancementStr}`
 }
 
 document.getElementById("least").innerText = makeMinMaxStr("least", leastAdvancements, leastAdvancementsEpisodes)
