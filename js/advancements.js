@@ -272,6 +272,13 @@ const episodes = [
 		"advancements": [
 			"adventure/very_very_frightening"
 		]
+	},
+	{
+		"title": "I Got The Rarest Armor Trims in Minecraft... (#19)",
+		"videoId": "fyNYmQ58oDw",
+		"advancements": [
+			"adventure/trim_with_any_armor_pattern", "adventure/trim_with_all_exclusive_armor_patterns"
+		]
 	}
 ]
 
