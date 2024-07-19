@@ -139,7 +139,7 @@ let average = Math.round((advancementCount / episodes.length)*1000) / 1000
 document.getElementById("average").innerText = `On average, Skip got ~${average} advancements per episode`
 let remaining = 122 - advancementCount
 let estimate = episodes.length + Math.ceil(remaining / average)
-document.getElementById("estimate").innerText = `With ${122 - advancementCount} advencement(s) remaining, the goal might be reached around June ${dayToHuman(estimate)}`
+document.getElementById("estimate").innerText = `With ${122 - advancementCount} advancement(s) remaining, the goal might be reached around June ${dayToHuman(estimate)}`
 
 Chart.defaults.font.family = "Minecraftio"
 Chart.defaults.font.size = 16
