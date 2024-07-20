@@ -279,6 +279,13 @@ const episodes = [
 		"advancements": [
 			"adventure/trim_with_any_armor_pattern", "adventure/trim_with_all_exclusive_armor_patterns"
 		]
+	},
+	{
+		"title": "I Collected Every Cat in Minecraft... (#20)",
+		"videoId": "OTKn504FdiA",
+		"advancements": [
+			"husbandry/complete_catalogue"
+		]
 	}
 ]
 
