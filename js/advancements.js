@@ -286,6 +286,13 @@ const episodes = [
 		"advancements": [
 			"husbandry/complete_catalogue"
 		]
+	},
+	{
+		"title": "I Mixed Every Potion Together in Minecraft... (#21)",
+		"videoId": "t0HexnrG4g0",
+		"advancements": [
+			"nether/all_potions"
+		]
 	}
 ]
 
