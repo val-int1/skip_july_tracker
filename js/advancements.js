@@ -293,6 +293,13 @@ const episodes = [
 		"advancements": [
 			"nether/all_potions"
 		]
+	},
+	{
+		"title": "I Tried Every Frog in Minecraft... (#22)",
+		"videoId": "K7m7diNDRKw",
+		"advancements": [
+			"husbandry/tadpole_in_a_bucket", "husbandry/leash_all_frog_variants", "husbandry/froglights", "husbandry/balanced_diet"
+		]
 	}
 ]
 

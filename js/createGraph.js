@@ -159,6 +159,7 @@ let chart = new Chart(canvas, {
 	},
 	options: {
 		responsive: true,
+		maintainAspectRatio: false,
 		scales: {
 			y: { beginAtZero: true, max: 122 }
 		},
