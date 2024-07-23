@@ -24,6 +24,7 @@ let mostAdvancementsEpisodes = []
 let days = []
 let episodeAdvancements = []
 let totalAdvancements = []
+let averageAdvancements = []
 let advancementCount = 0
 
 let episodeLists = document.getElementsByClassName("episodeList")
@@ -84,6 +85,7 @@ for(let index in episodes) {
 
 	advancementCount += advancements
 	totalAdvancements[i] = advancementCount
+	averageAdvancements[i] = advancementCount / (i+1)
 
 	let episodeItem = document.createElement("li")
 	let episodeLink = document.createElement("a")
@@ -168,7 +170,7 @@ let chart = new Chart(canvas, {
 })
 
 function changeChart(btn, data, maxY) {
-	(btn == totalButton ? episodeButton : totalButton).classList.remove("selected")
+	document.querySelector(".graphButton.selected").classList.remove("selected")
 	btn.classList.add("selected")
 	chart.data.datasets[0].data = data
 	chart.options.scales.y.max = maxY
@@ -188,6 +190,9 @@ if(episodeGraphMax % 2 == 1) {
 	episodeGraphMax += 2
 }
 episodeButton.addEventListener("click", (e) => changeChart(episodeButton, episodeAdvancements, episodeGraphMax))
+
+let averageButton = document.getElementById("averageButton")
+averageButton.addEventListener("click", (e) => changeChart(averageButton, averageAdvancements, episodeGraphMax))
 
 let nerd = document.getElementById("nerd")
 nerd.style.transition = "translate 0.5s ease-in-out"

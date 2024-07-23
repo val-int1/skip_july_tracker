@@ -300,6 +300,13 @@ const episodes = [
 		"advancements": [
 			"husbandry/tadpole_in_a_bucket", "husbandry/leash_all_frog_variants", "husbandry/froglights", "husbandry/balanced_diet"
 		]
+	},
+	{
+		"title": "Minecraft But I Tame Every Mob... (#23)",
+		"videoId": "_f2hM6INYWQ",
+		"advancements": [
+			"husbandry/bred_all_animals"
+		]
 	}
 ]
 
