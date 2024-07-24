@@ -307,6 +307,13 @@ const episodes = [
 		"advancements": [
 			"husbandry/bred_all_animals"
 		]
+	},
+	{
+		"title": "I Tamed the Lost Wolf in Minecraft... (#24)",
+		"videoId": "5RHjR_SVnOE",
+		"advancements": [
+			"husbandry/whole_pack"
+		]
 	}
 ]
 
