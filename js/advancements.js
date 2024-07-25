@@ -1,6 +1,4 @@
 const advancements = {
-	"missingno": { "title": "????? (wasn't shown in the episode)", "icon": "Invicon_Locked_Chest_13w18a.png" },
-
 	"story/root": { "title": "Minecraft", "icon": "Invicon_Grass_Block.png", "wiki": "Minecraft_tab#Minecraft" },
 	"story/mine_stone": { "title": "Stone Age", "icon": "Invicon_Wooden_Pickaxe.png", "wiki": "Minecraft_tab#Stone_Age" },
 	"story/upgrade_tools": { "title": "Getting an Upgrade", "icon": "Invicon_Stone_Pickaxe.png", "wiki": "Minecraft_tab#Getting_an_Upgrade" },
@@ -159,7 +157,7 @@ const episodes = [
 		"title": "My Unluckiest Experience in Minecraft (#4)",
 		"videoId": "E1T76jgDUiw",
 		"advancements": [
-			"adventure/spyglass_at_ghast", "missingno", "nether/return_to_sender",
+			"adventure/spyglass_at_ghast", "nether/return_to_sender",
 			"nether/obtain_crying_obsidian", "nether/distract_piglin", "nether/find_bastion",
 			"nether/charge_respawn_anchor", "nether/loot_bastion", "nether/explore_nether",
 		]
@@ -313,6 +311,13 @@ const episodes = [
 		"videoId": "5RHjR_SVnOE",
 		"advancements": [
 			"husbandry/whole_pack"
+		]
+	},
+	{
+		"title": "Trapping This Minecraft Mob Was a Mistake… (#25)",
+		"videoId": "kGdCZz9pGSM",
+		"advancements": [
+
 		]
 	}
 ]
