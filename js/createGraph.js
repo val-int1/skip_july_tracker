@@ -13,7 +13,8 @@ const splashTexts = [
 	"Louis Pasteur didn't die for this",
 	// Since my count is desynced from the one in the videos (though mine is accurate)
 	// Also, it's not NOOBster's fault, it's just the ones missing are not showing up
-	"I'M not wrong, YOU'RE wrong!"
+	// Welp, seems like this line lasted only one episode lol
+	//"I'M not wrong, YOU'RE wrong!"
 ]
 document.getElementById("splashText").innerHTML = splashTexts[Math.floor(Math.random() * splashTexts.length)]
 

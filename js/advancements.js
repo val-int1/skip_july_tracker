@@ -316,9 +316,12 @@ const episodes = [
 	{
 		"title": "Trapping This Minecraft Mob Was a Mistake… (#25)",
 		"videoId": "kGdCZz9pGSM",
-		"advancements": [
-
-		]
+		"advancements": [ ]
+	},
+	{
+		"title": "I Built a Secret Warden Prison Under My Minecraft House... (#26)",
+		"videoId": "mw3PA0Dw_Jc",
+		"advancements": [ ]
 	}
 ]
 
