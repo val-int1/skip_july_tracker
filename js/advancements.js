@@ -322,6 +322,11 @@ const episodes = [
 		"title": "I Built a Secret Warden Prison Under My Minecraft House... (#26)",
 		"videoId": "mw3PA0Dw_Jc",
 		"advancements": [ ]
+	},
+	{
+		"title": "He Trapped Me Inside of a Trial Chamber in Minecraft... (#27)",
+		"videoId": "vzMcxdejlzM",
+		"advancements": [ ]
 	}
 ]
 
