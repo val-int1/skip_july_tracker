@@ -327,6 +327,11 @@ const episodes = [
 		"title": "He Trapped Me Inside of a Trial Chamber in Minecraft... (#27)",
 		"videoId": "vzMcxdejlzM",
 		"advancements": [ ]
+	},
+	{
+		"title": "I Tested Minecraft Build Hacks Without Creative Mode... (#28)",
+		"videoId": "fjSzowlBmII",
+		"advancements": [ ]
 	}
 ]
 
