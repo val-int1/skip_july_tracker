@@ -332,6 +332,11 @@ const episodes = [
 		"title": "I Tested Minecraft Build Hacks Without Creative Mode... (#28)",
 		"videoId": "fjSzowlBmII",
 		"advancements": [ ]
+	},
+	{
+		"title": "Playing 1 by 1 Minecraft... (#29)",
+		"videoId": "J00_D48TazI",
+		"advancements": [ ]
 	}
 ]
 
