@@ -66,10 +66,6 @@ function getSmallestList() {
 for(let index in episodes) {
 	let i = parseInt(index)
 	let episode = episodes[i]
-	if(episode.advancements.length == 0) {
-		continue
-	}
-	let episodeList = getSmallestList()
 
 	days[i] = dayToHuman(i+1)
 
@@ -94,6 +90,10 @@ for(let index in episodes) {
 	totalAdvancements[i] = advancementCount
 	averageAdvancements[i] = advancementCount / (i+1)
 
+	if(episode.advancements.length == 0) {
+		continue
+	}
+	let episodeList = getSmallestList()
 	let episodeItem = document.createElement("li")
 	let episodeLink = document.createElement("a")
 
