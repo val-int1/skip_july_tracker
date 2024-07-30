@@ -66,6 +66,9 @@ function getSmallestList() {
 for(let index in episodes) {
 	let i = parseInt(index)
 	let episode = episodes[i]
+	if(episode.advancements.length == 0) {
+		continue
+	}
 	let episodeList = getSmallestList()
 
 	days[i] = dayToHuman(i+1)
@@ -100,26 +103,14 @@ for(let index in episodes) {
 	episodeItem.appendChild(episodeLink)
 	episodeItem.appendChild(document.createTextNode(":"))
 	episodeList.appendChild(episodeItem)
+	let advancementList = document.createElement("ul")
 
-	if(episode.advancements.length == 0) {
-		let s
-		if(advancementCount == 122) {
-			s = "All advancements were earned, gg!!"
-		} else {
-			s = "No advancements were earned this episode"
-		}
-		episodeItem.appendChild(document.createElement("br"))
-		episodeItem.appendChild(document.createTextNode(s))
-	} else {
-		let advancementList = document.createElement("ul")
-
-		for(let advancementName of episode.advancements) {
-			let advancementItem = document.createElement("li")
-			advancementItem.appendChild(generateAdvancementBadge(advancementName))
-			advancementList.appendChild(advancementItem)
-		}
-		episodeItem.appendChild(advancementList)
+	for(let advancementName of episode.advancements) {
+		let advancementItem = document.createElement("li")
+		advancementItem.appendChild(generateAdvancementBadge(advancementName))
+		advancementList.appendChild(advancementItem)
 	}
+	episodeItem.appendChild(advancementList)
 }
 
 function makeMinMaxStr(minmax, amount, episodes) {

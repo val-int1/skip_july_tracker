@@ -337,6 +337,13 @@ const episodes = [
 		"title": "Playing 1 by 1 Minecraft... (#29)",
 		"videoId": "J00_D48TazI",
 		"advancements": [ ]
+	},
+	{
+		"title": "I Hired the Wither to Kill the Ender Dragon in Minecraft... (#30)",
+		"videoId": "dCR-JP1dM-A",
+		"advancements": [
+			"end/respawn_dragon", "adventure/spyglass_at_dragon", "end/dragon_breath"
+		]
 	}
 ]
 
