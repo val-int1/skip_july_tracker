@@ -344,6 +344,13 @@ const episodes = [
 		"advancements": [
 			"end/respawn_dragon", "adventure/spyglass_at_dragon", "end/dragon_breath"
 		]
+	},
+	{
+		"title": "I Got All 122 Minecraft Advancements",
+		"videoId": "d8J3wOali6M",
+		"advancements": [
+			"nether/all_effects"
+		]
 	}
 ]
 

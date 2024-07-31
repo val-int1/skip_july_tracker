@@ -10,13 +10,15 @@ const splashTexts = [
 	// Burried treasure + Trial chambers being near Skip's house
 	"SkipLand: Everything you need, in walking distance",
 	// Reference to the raw milk story
-	"Louis Pasteur didn't die for this",
-	// Since my count is desynced from the one in the videos (though mine is accurate)
-	// Also, it's not NOOBster's fault, it's just the ones missing are not showing up
-	// Welp, seems like this line lasted only one episode lol
-	//"I'M not wrong, YOU'RE wrong!"
+	"Louis Pasteur didn't die for this"
 ]
-document.getElementById("splashText").innerHTML = splashTexts[Math.floor(Math.random() * splashTexts.length)]
+
+let today = new Date()
+if(today.getDate() == 31 && today.getMonth() + 1 == 7 && today.getYear() + 1900 == 2024) {
+	document.getElementById("splashText").innerHTML = "CONGRATULATIONS SKIP!!!!!"
+} else {
+	document.getElementById("splashText").innerHTML = splashTexts[Math.floor(Math.random() * splashTexts.length)]
+}
 
 const canvas = document.getElementById("chart")
 
@@ -206,4 +208,4 @@ document.addEventListener("keydown", (e) => {
 	} else {
 		easterEggIndex = 0
 	}
-});
+})
